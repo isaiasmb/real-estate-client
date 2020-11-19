@@ -33,6 +33,7 @@ export const Caption = styled.div`
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     padding: ${theme.spacings.small};
+    padding-bottom: ${theme.spacings.large};
     ${media.greaterThan('medium')`
       border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
       padding: ${theme.spacings.large};

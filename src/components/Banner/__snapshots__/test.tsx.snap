@@ -48,6 +48,7 @@ exports[`<Banner /> should render correctly 1`] = `
   width: 100%;
   background-color: rgba(0,0,0,0.7);
   padding: 2.4rem;
+  padding-bottom: 4.0rem;
 }
 
 .c3 {
