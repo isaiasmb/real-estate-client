@@ -15,6 +15,6 @@ export const IconWrapper = styled.div`
 
 export const Value = styled.span`
   ${({ theme }) => css`
-    margin-left: ${theme.spacings.xxsmall};
+    margin-left: ${theme.spacings.xxxsmall};
   `}
 `

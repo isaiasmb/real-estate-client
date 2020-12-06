@@ -20,7 +20,7 @@ exports[`<IconInfo /> should render the icon and the value 1`] = `
 }
 
 .c3 {
-  margin-left: 0.8rem;
+  margin-left: 0.4rem;
 }
 
 <div
