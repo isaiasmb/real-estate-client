@@ -1,8 +1,10 @@
 import * as S from './styles'
 
+export type RibbonColors = 'primary' | 'secondary'
+
 export type RibbonTypes = {
   children: React.ReactNode
-  color?: 'primary' | 'secondary'
+  color?: RibbonColors
 }
 
 const Ribbon = ({ children, color = 'primary' }: RibbonTypes) => (
