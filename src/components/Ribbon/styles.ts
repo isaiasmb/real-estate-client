@@ -8,7 +8,7 @@ export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, color }) => css`
     display: inline-block;
     padding: ${theme.spacings.xxxsmall};
-    background-color: ${theme.colors[color]};
+    ${!!color && `background-color: ${theme.colors[color]}`};
     border-radius: ${theme.border.radius.large};
     line-height: ${theme.font.sizes.xsmall};
   `}
