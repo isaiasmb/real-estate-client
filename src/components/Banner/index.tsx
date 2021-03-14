@@ -1,4 +1,5 @@
 import Button from 'components/Button'
+import { Container } from 'components/Container'
 
 import * as S from './styles'
 
@@ -21,11 +22,13 @@ const Banner = ({
     <S.Image src={img} role="img" aria-label={title} />
 
     <S.Caption>
-      <S.Title>{title}</S.Title>
-      <S.Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-      <Button as="a" href={buttonLink} size="large">
-        {buttonLabel}
-      </Button>
+      <Container>
+        <S.Title>{title}</S.Title>
+        <S.Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
+        <Button as="a" href={buttonLink} size="large">
+          {buttonLabel}
+        </Button>
+      </Container>
     </S.Caption>
   </S.Wrapper>
 )

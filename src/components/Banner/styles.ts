@@ -32,11 +32,11 @@ export const Caption = styled.div`
   ${({ theme }) => css`
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: ${theme.spacings.small};
+    padding: ${theme.spacings.small} 0;
     padding-bottom: ${theme.spacings.large};
     ${media.greaterThan('medium')`
       border-radius: 0 0 ${theme.border.radius.medium} ${theme.border.radius.medium};
-      padding: ${theme.spacings.large};
+      padding: ${theme.spacings.large} 0;
       position: absolute;
       bottom: 0;
       left: 0;

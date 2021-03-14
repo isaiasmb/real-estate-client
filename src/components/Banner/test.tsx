@@ -5,10 +5,10 @@ import Banner from '.'
 
 const props = {
   img: 'https://source.unsplash.com/user/fromitaly/1042x580',
-  title: 'Defy death',
-  subtitle: '<p>Play the new <strong>CrashLands</strong> season',
+  title: 'Nemo enim ipsam',
+  subtitle: '<p>Ut labore et <strong>dolore magnam</strong> aliquam',
   buttonLabel: 'Buy now',
-  buttonLink: '/games/defy-death'
+  buttonLink: '/houses/nemo-enim-ipsam'
 }
 
 describe('<Banner />', () => {
@@ -16,14 +16,18 @@ describe('<Banner />', () => {
     const { container } = renderWithTheme(<Banner {...props} />)
 
     expect(
-      screen.getByRole('heading', { name: /Defy death/i })
+      screen.getByRole('heading', { name: /Nemo enim ipsam/i })
     ).toBeInTheDocument()
 
     expect(
-      screen.getByRole('heading', { name: /Play the new CrashLands season/i })
+      screen.getByRole('heading', {
+        name: /Ut labore et dolore magnam aliquam/i
+      })
     ).toBeInTheDocument()
 
-    expect(screen.getByRole('img', { name: /Defy death/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('img', { name: /Nemo enim ipsam/i })
+    ).toBeInTheDocument()
 
     expect(container.firstChild).toMatchSnapshot()
   })
