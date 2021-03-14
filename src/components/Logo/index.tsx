@@ -17,7 +17,7 @@ const Logo = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      viewBox="0 0 886 402"
+      viewBox="40 30 790 335"
       role="img"
       aria-label="Real Estate"
     >

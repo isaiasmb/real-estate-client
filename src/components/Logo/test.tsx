@@ -4,17 +4,17 @@ import { renderWithTheme } from 'utils/tests/helpers'
 import Logo from '.'
 
 describe('<Logo />', () => {
-  it.skip('should render a white label by default', () => {
+  it('should render a black label by default', () => {
     renderWithTheme(<Logo />)
     expect(screen.getByLabelText(/Real Estate/i).parentElement).toHaveStyle({
-      color: '#FAFAFA'
+      color: '#030517'
     })
   })
 
-  it.skip('should render a black when color is passed', () => {
-    renderWithTheme(<Logo color="black" />)
+  it('should render a white when color is passed', () => {
+    renderWithTheme(<Logo color="white" />)
     expect(screen.getByLabelText(/Real Estate/i).parentElement).toHaveStyle({
-      color: '#030517'
+      color: '#FAFAFA'
     })
   })
 
