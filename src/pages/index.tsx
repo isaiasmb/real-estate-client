@@ -6,11 +6,9 @@ export default function Index(props: HomeTemplateProps) {
   return <Home {...props} />
 }
 
-export function getServerSideProps() {
-  return {
-    props: {
-      banners: bannersMock,
-      recentProperties: houseCardsMock
-    }
+export const getStaticProps = () => ({
+  props: {
+    banners: bannersMock,
+    recentProperties: houseCardsMock
   }
-}
+})
