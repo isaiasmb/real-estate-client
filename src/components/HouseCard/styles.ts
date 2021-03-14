@@ -80,6 +80,10 @@ export const InfoWrapper = styled.div`
     border-top: 1px solid ${theme.colors.lightGray};
     ${IconInfoStyles.Wrapper} {
       margin-right: ${theme.spacings.xsmall};
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   `}
 `
