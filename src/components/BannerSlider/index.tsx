@@ -9,10 +9,13 @@ export type BannerSliderProps = {
 
 const settings: SliderSettings = {
   dots: true,
-  infinite: false,
-  speed: 500,
+  infinite: true,
+  speed: 1500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  pauseOnHover: true,
   arrows: true,
   prevArrow: <S.PrevIcon />,
   nextArrow: <S.NextIcon />

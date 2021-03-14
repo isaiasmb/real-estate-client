@@ -9,15 +9,23 @@ describe('<BannerSlider />', () => {
   it('should render with 1 active item', () => {
     const { container } = renderWithTheme(<BannerSlider items={items} />)
 
-    expect(container.querySelectorAll('.slick-slide')).toHaveLength(3)
+    expect(
+      container.querySelectorAll('.slick-slide:not(.slick-cloned)')
+    ).toHaveLength(3)
     expect(container.querySelectorAll('li.slick-active')).toHaveLength(1)
 
     expect(
-      screen.getByRole('heading', { name: /defy death 1/i, hidden: false })
+      screen.getAllByRole('heading', {
+        name: /Nemo enim ipsam 1/i,
+        hidden: false
+      })[0]
     ).toBeInTheDocument()
 
     expect(
-      screen.getByRole('heading', { name: /defy death 2/i, hidden: true })
+      screen.getAllByRole('heading', {
+        name: /Nemo enim ipsam 2/i,
+        hidden: true
+      })[0]
     ).toBeInTheDocument()
   })
 

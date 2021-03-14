@@ -1,24 +1,23 @@
 export default [
   {
     img: 'https://source.unsplash.com/user/fromitaly/1920x600',
-    title: 'Defy death 1',
-    subtitle: '<p>Play the new <strong>CrashLands</strong> season',
+    title: 'Nemo enim ipsam 1',
+    subtitle: '<p>Ut labore et <strong>dolore magnam</strong> aliquam',
     buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death',
-    ribbon: 'Bestselling'
+    buttonLink: '/houses/nemo-enim-ipsam'
   },
   {
     img: 'https://source.unsplash.com/user/fromitaly/1920x600',
-    title: 'Defy death 2',
-    subtitle: '<p>Play the new <strong>CrashLands</strong> season',
+    title: 'Nemo enim ipsam 2',
+    subtitle: '<p>Ut labore et <strong>dolore magnam</strong> aliquam',
     buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death'
+    buttonLink: '/houses/nemo-enim-ipsam'
   },
   {
     img: 'https://source.unsplash.com/user/fromitaly/1920x600',
-    title: 'Defy death 3',
-    subtitle: '<p>Play the new <strong>CrashLands</strong> season',
+    title: 'Nemo enim ipsam 3',
+    subtitle: '<p>Ut labore et <strong>dolore magnam</strong> aliquam',
     buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death'
+    buttonLink: '/houses/nemo-enim-ipsam'
   }
 ]

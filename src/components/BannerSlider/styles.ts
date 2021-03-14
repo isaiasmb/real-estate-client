@@ -53,7 +53,7 @@ const NavigationIcon = styled(NavigateNext)`
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: ${theme.layers.alwaysOnTop};
+    z-index: ${theme.layers.base};
     &.slick-disabled {
       display: none !important;
     }
