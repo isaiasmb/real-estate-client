@@ -43,7 +43,7 @@ describe('<Portal />', () => {
       screen.getByRole('heading', { name: /Portal Text 1/i })
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { name: /Portal Text 1/i })
+      screen.getByRole('heading', { name: /Portal Text 2/i })
     ).toBeInTheDocument()
     expect(container.querySelectorAll('#portal-root')).toHaveLength(1)
   })

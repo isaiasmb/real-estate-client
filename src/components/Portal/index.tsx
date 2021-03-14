@@ -14,7 +14,6 @@ const Portal = ({ children }: PortalProps) => {
       const newPortal = document.createElement('div')
       newPortal.setAttribute('id', 'portal-root')
       document.body.appendChild(newPortal)
-      // render(<div>teste</div>, <Main />)
     }
 
     setMount(document.getElementById('portal-root'))
