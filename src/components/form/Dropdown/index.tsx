@@ -53,10 +53,10 @@ const Dropdown = ({
         <S.Options>
           {options.map((option) => (
             <S.Option
+              key={option.value}
               id={option.value}
               selected={!!selected && selected.value === option.value}
-              disabled={option.disabled}
-              key={option.value}
+              disabled={!!option.disabled}
               onClick={() => {
                 if (option.disabled) {
                   return
