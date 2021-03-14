@@ -12,11 +12,13 @@ exports[`<TextField /> Renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: #EAEAEA;
+  background-color: #FAFAFA;
   border-radius: 0.2rem;
-  padding: 0 1.6rem;
-  border: 0.2rem solid;
+  border: 0.1rem solid;
   border-color: #EAEAEA;
+  padding: 0 1.6rem;
+  margin: 0.4rem 0;
+  height: 40px;
 }
 
 .c4:focus-within {

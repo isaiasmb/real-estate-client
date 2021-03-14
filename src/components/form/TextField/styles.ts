@@ -9,11 +9,13 @@ type WrapperProps = Pick<TextFieldProps, 'disabled'> & { error?: boolean }
 export const InputWrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
-    background: ${theme.colors.lightGray};
+    background-color: ${theme.colors.white};
     border-radius: 0.2rem;
-    padding: 0 ${theme.spacings.xsmall};
-    border: 0.2rem solid;
+    border: 0.1rem solid;
     border-color: ${theme.colors.lightGray};
+    padding: 0 ${theme.spacings.xsmall};
+    margin: ${theme.spacings.xxxsmall} 0;
+    height: 40px;
     &:focus-within {
       box-shadow: 0 0 0.5rem ${theme.colors.primary};
     }
@@ -73,6 +75,9 @@ const wrapperModifiers = {
     }
   `,
   disabled: (theme: DefaultTheme) => css`
+    ${InputWrapper} {
+      background-color: ${theme.colors.lightGray};
+    }
     ${Label},
     ${Input},
     ${Icon} {
