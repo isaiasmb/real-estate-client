@@ -1,5 +1,6 @@
 import Banner, { BannerProps } from 'components/Banner'
 import Slider, { SliderSettings } from 'components/Slider'
+import { PrevIcon, NextIcon } from 'components/NavigationIcon'
 
 import * as S from './styles'
 
@@ -17,8 +18,8 @@ const settings: SliderSettings = {
   autoplaySpeed: 5000,
   pauseOnHover: true,
   arrows: true,
-  prevArrow: <S.PrevIcon />,
-  nextArrow: <S.NextIcon />
+  prevArrow: <PrevIcon />,
+  nextArrow: <NextIcon />
 }
 
 const BannerSlider = ({ items }: BannerSliderProps) => (
