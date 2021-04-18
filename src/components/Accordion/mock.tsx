@@ -24,16 +24,31 @@ export default [
   {
     title: 'First Floor',
     header: Header,
-    content: <p>First Floor Content</p>
+    content: (
+      <div>
+        <img style={{ width: '100%' }} src="/img/shape-house-floor.jpg" />
+        <p>First Floor Content</p>
+      </div>
+    )
   },
   {
     title: 'Second Floor',
     header: Header,
-    content: <p>Second Floor Content</p>
+    content: (
+      <div>
+        <img style={{ width: '100%' }} src="/img/shape-house-floor.jpg" />
+        <p>Second Floor Content</p>
+      </div>
+    )
   },
   {
     title: 'Third Floor',
     header: Header,
-    content: <p>Third Floor Content</p>
+    content: (
+      <div>
+        <img style={{ width: '100%' }} src="/img/shape-house-floor.jpg" />
+        <p>Third Floor Content</p>
+      </div>
+    )
   }
 ] as AccordionType[]
