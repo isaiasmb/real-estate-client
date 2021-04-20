@@ -6,8 +6,9 @@ import TextField from 'components/form/TextField'
 import Button from 'components/Button'
 
 import * as S from './styles'
+import Textarea from 'components/form/Textarea'
 
-type AgentType = {
+export type AgentType = {
   name: string
   phone: string
 }
@@ -29,6 +30,8 @@ const ContactCard = ({ agent }: ContactCardProps) => (
       <TextField placeholder="Your E-mail address" icon={<Email />} />
 
       <TextField placeholder="Your Phone" icon={<Phone />} />
+
+      <Textarea rows={3} />
 
       <Button fullWidth>Contact</Button>
     </S.FormContact>

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
-import * as TextFieldStyled from 'components/form/TextField/styles'
+import * as TextFieldStyles from 'components/form/TextField/styles'
+import * as TextareaStyles from 'components/form/Textarea/styles'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -40,7 +41,7 @@ export const Phone = styled.a`
 
 export const FormContact = styled.form`
   ${({ theme }) => css`
-    ${TextFieldStyled.Wrapper} {
+    ${TextFieldStyles.Wrapper}, ${TextareaStyles.Wrapper} {
       margin-bottom: ${theme.spacings.xsmall};
     }
   `}
