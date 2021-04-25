@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import * as HouseInfoPreviewStyles from 'components/HouseInfoPreview/styles'
 
 export const Wrapper = styled.article`
   ${({ theme }) => css`
@@ -6,6 +7,11 @@ export const Wrapper = styled.article`
     padding: ${theme.spacings.xsmall};
     &:hover {
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    ${HouseInfoPreviewStyles.Wrapper} {
+      padding-top: ${theme.spacings.xxsmall};
+      border-top: 1px solid ${theme.colors.lightGray};
     }
   `}
 `
