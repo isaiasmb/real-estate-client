@@ -68,11 +68,11 @@ const Gallery = ({ items, maxThumbs = 9 }: GalleryProps) => {
     <S.Wrapper>
       <Slider ref={slider} settings={settings}>
         {items.map((item, index) => (
-          <img
+          <S.Image
             role="button"
             key={`thumb-${index}`}
             src={item.src}
-            alt={`Thumb - ${item.label}`}
+            aria-label={`Thumb - ${item.label}`}
             onClick={() => {
               setIsOpen(true)
               slider.current!.slickGoTo(index, true)
