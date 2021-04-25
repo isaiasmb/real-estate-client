@@ -3,6 +3,15 @@ import { renderWithTheme } from 'utils/tests/helpers'
 
 import HouseCard from '.'
 
+jest.mock('components/HouseInfoPreview', () => {
+  return {
+    __esModule: true,
+    default: function Mock() {
+      return <div data-testid="Mock HouseInfoPreview"></div>
+    }
+  }
+})
+
 const props = {
   title: 'House on the Arcadia',
   img: 'https://source.unsplash.com/user/fromitaly/1042x580'
@@ -20,34 +29,8 @@ describe('<HouseCard />', () => {
       'src',
       props.img
     )
-  })
 
-  it('should render all icon infos', () => {
-    renderWithTheme(
-      <HouseCard
-        {...props}
-        amountOfBedrooms={3}
-        amountOfBathrooms={2}
-        amountOfGarages={1}
-        measures={110}
-      />
-    )
-
-    const bedroomsInfo = screen.getByLabelText(/Amount of bedrooms/i)
-    expect(bedroomsInfo).toBeInTheDocument()
-    expect(bedroomsInfo.parentElement?.parentElement).toHaveTextContent('3')
-
-    const bathroomsInfo = screen.getByLabelText(/Amount of bathrooms/i)
-    expect(bathroomsInfo).toBeInTheDocument()
-    expect(bathroomsInfo.parentElement?.parentElement).toHaveTextContent('2')
-
-    const garagesInfo = screen.getByLabelText(/Amount of garages/i)
-    expect(garagesInfo).toBeInTheDocument()
-    expect(garagesInfo.parentElement?.parentElement).toHaveTextContent('1')
-
-    const measuresInfo = screen.getByLabelText(/Measures/i)
-    expect(measuresInfo).toBeInTheDocument()
-    expect(measuresInfo.parentElement?.parentElement).toHaveTextContent('110')
+    expect(screen.getByTestId('Mock HouseInfoPreview')).toBeInTheDocument()
   })
 
   it('should render the amount of photos', () => {

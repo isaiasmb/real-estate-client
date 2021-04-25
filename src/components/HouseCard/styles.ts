@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components'
 
-import * as IconInfoStyles from 'components/IconInfo/styles'
-
 export const Wrapper = styled.article`
   ${({ theme }) => css`
     position: relative;
@@ -71,19 +69,5 @@ export const Title = styled.h3`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.xxsmall};
     margin-bottom: ${theme.spacings.xxsmall};
-  `}
-`
-
-export const InfoWrapper = styled.div`
-  ${({ theme }) => css`
-    padding-top: ${theme.spacings.xxsmall};
-    border-top: 1px solid ${theme.colors.lightGray};
-    ${IconInfoStyles.Wrapper} {
-      margin-right: ${theme.spacings.xsmall};
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
   `}
 `
