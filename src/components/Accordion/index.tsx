@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { ArrowDownS, ArrowUpS } from '@styled-icons/remix-fill'
 
+import MediaMatch from 'components/MediaMatch'
+
 import * as S from './styles'
 
 export type AccordionType = {
@@ -49,7 +51,9 @@ const Accordion = ({ accordions }: AccordionProps) => {
           <S.HeaderWrapper onClick={() => toggleAccordion(key, accordion)}>
             <S.HeaderContent>
               <S.Title>{accordion.title}</S.Title>
-              {accordion.header && <S.Header>{accordion.header}</S.Header>}
+              <MediaMatch greaterThan="small">
+                {accordion.header && <S.Header>{accordion.header}</S.Header>}
+              </MediaMatch>
             </S.HeaderContent>
             <S.ArrowBox>
               {!accordion.isOpen && <ArrowDownS size={16} />}
