@@ -6,6 +6,10 @@ export const Wrapper = styled.div`
     ${media.lessThan('huge')`
       overflow-x: hidden;
     `}
+    .slick-slider {
+      margin-left: -${theme.spacings.xsmall};
+      margin-right: -${theme.spacings.xsmall};
+    }
     .slick-track,
     .slick-list {
       display: flex;
