@@ -40,36 +40,6 @@ export const PropertiesGrig = styled.div`
   `}
 `
 
-export const SectionParallax = styled.div`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.black};
-    .react-parallax {
-      height: 30rem;
-
-      img {
-        opacity: 0.3;
-      }
-    }
-
-    .react-parallax-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
-  `}
-`
-
-export const ParallaxContent = styled.div`
-  text-align: center;
-`
-
-export const ParallaxText = styled.p`
-  ${({ theme }) => css`
-    color: ${theme.colors.white};
-  `}
-`
-
 export const SectionPartner = styled.section`
   ${({ theme }) => css`
     padding-top: ${theme.spacings.huge};
