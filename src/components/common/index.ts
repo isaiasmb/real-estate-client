@@ -7,7 +7,6 @@ export const useMouseDown = (
   propsToWait: (string | number | boolean)[] = []
 ) => {
   const handleClick = (event: MouseEvent) => {
-    console.log('event: ', event)
     if (Array.isArray(nodes)) {
       const resultNodes = nodes.map((node) => {
         return containsTarget(event, node)
