@@ -108,4 +108,13 @@ describe('<Gallery />', () => {
 
     expect(img.parentElement?.parentElement).toHaveClass('slick-active')
   })
+
+  it('should render +9 when maxThumbs is equal thumbs.length', async () => {
+    renderWithTheme(<Gallery items={mockItems} maxThumbs={9} />)
+
+    expect(screen.getByText('+9')).toHaveStyle({
+      backgroundColor: 'rgba(0,0,0,0.5)',
+      color: '#FAFAFA'
+    })
+  })
 })

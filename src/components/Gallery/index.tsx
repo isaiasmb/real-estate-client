@@ -91,9 +91,10 @@ const Gallery = ({ items, maxThumbs = 9 }: GalleryProps) => {
             }}
           >
             <S.ThumbLink>
-              {index + 1 === thumbs.length && (
-                <S.LastThumbCover>+{maxThumbs}</S.LastThumbCover>
-              )}
+              {index + 1 === thumbs.length &&
+                thumbs.length - 1 === maxThumbs && (
+                  <S.LastThumbCover>+{maxThumbs}</S.LastThumbCover>
+                )}
               <img role="button" src={item.src} alt={`List - ${item.label}`} />
             </S.ThumbLink>
           </S.ThumbWrapper>
