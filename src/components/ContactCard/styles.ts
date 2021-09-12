@@ -11,6 +11,8 @@ export const Wrapper = styled.div`
 
 export const AgentWrapper = styled.div`
   ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
     margin-bottom: ${theme.spacings.small};
   `}
 `
@@ -18,6 +20,7 @@ export const AgentWrapper = styled.div`
 export const Name = styled.span`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
+    margin-bottom: ${theme.spacings.xxsmall};
   `}
 `
 
@@ -26,7 +29,7 @@ export const Phone = styled.a`
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-bottom: ${theme.spacings.xxxsmall};
+    margin-bottom: ${theme.spacings.xxsmall};
     font-size: ${theme.font.sizes.small};
 
     svg {
@@ -38,6 +41,8 @@ export const Phone = styled.a`
     }
   `}
 `
+
+export const Email = styled.span``
 
 export const FormContact = styled.form`
   ${({ theme }) => css`

@@ -11,6 +11,7 @@ import Textarea from 'components/form/Textarea'
 export type AgentType = {
   name: string
   phone: string
+  email: string
 }
 
 export type ContactCardProps = {
@@ -20,8 +21,9 @@ export type ContactCardProps = {
 const ContactCard = ({ agent }: ContactCardProps) => (
   <S.Wrapper>
     <S.AgentWrapper>
-      <S.Phone href={`tel:${agent.phone}`}>{agent.phone}</S.Phone>
       <S.Name>{agent.name}</S.Name>
+      <S.Phone href={`tel:${agent.phone}`}>{agent.phone}</S.Phone>
+      <S.Email>{agent.email}</S.Email>
     </S.AgentWrapper>
 
     <S.FormContact>
