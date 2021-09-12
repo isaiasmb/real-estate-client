@@ -71,7 +71,7 @@ const House = ({
               )}
             </S.SectionDescription>
             <Divider />
-            {floorPlans?.length && (
+            {floorPlans?.length > 0 && (
               <S.SectionFloorPlans>
                 <Heading color="black">Floor plans</Heading>
                 <Accordion accordions={getFloorPlansAccordion(floorPlans)} />
