@@ -1,10 +1,14 @@
 import styled, { css } from 'styled-components'
 import * as HouseInfoPreviewStyles from 'components/HouseInfoPreview/styles'
 
-export const Wrapper = styled.article`
+export const Wrapper = styled.a`
   ${({ theme }) => css`
     position: relative;
+    display: block;
     padding: ${theme.spacings.xsmall};
+    text-decoration: none;
+    transition: 0.3s;
+
     &:hover {
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
     }
@@ -56,12 +60,15 @@ export const ImageBox = styled.div`
   }
 `
 
-export const AmountOfPhotos = styled.div`
+export const AmountOfPhotosWrapper = styled.div`
   ${({ theme }) => css`
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: ${theme.colors.white};
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0 ${theme.spacings.xxsmall};
+    padding-bottom: calc(${theme.spacings.xxxsmall} / 2);
     border-radius: ${theme.border.radius.large};
 
     svg {
@@ -77,3 +84,5 @@ export const Title = styled.h3`
     margin-bottom: ${theme.spacings.xxsmall};
   `}
 `
+
+export const AmountOfPhotos = styled.span``
