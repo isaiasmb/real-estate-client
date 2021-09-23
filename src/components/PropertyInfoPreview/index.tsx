@@ -7,19 +7,19 @@ import IconInfo from 'components/IconInfo'
 
 import * as S from './styles'
 
-export type HouseInfoPreviewProps = {
+export type PropertyInfoPreviewProps = {
   amountOfBedrooms?: number
   amountOfBathrooms?: number
   amountOfGarages?: number
   measures?: number
 }
 
-const HouseInfoPreview = ({
+const PropertyInfoPreview = ({
   amountOfBedrooms,
   amountOfBathrooms,
   amountOfGarages,
   measures
-}: HouseInfoPreviewProps) => (
+}: PropertyInfoPreviewProps) => (
   <S.Wrapper>
     {!!amountOfBedrooms && (
       <IconInfo
@@ -48,4 +48,4 @@ const HouseInfoPreview = ({
   </S.Wrapper>
 )
 
-export default HouseInfoPreview
+export default PropertyInfoPreview

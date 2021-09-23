@@ -3,18 +3,18 @@ import ContactCard, { AgentType } from 'components/ContactCard'
 import { Divider } from 'components/Divider'
 import Gallery, { GalleryImageProps } from 'components/Gallery'
 import Heading from 'components/Heading'
-import { HouseCardProps } from 'components/HouseCard'
-import HouseInfoPreview, {
-  HouseInfoPreviewProps
-} from 'components/HouseInfoPreview'
-import HouseSlider from 'components/HouseSlider'
+import { PropertyCardProps } from 'components/PropertyCard'
+import PropertyInfoPreview, {
+  PropertyInfoPreviewProps
+} from 'components/PropertyInfoPreview'
+import PropertySlider from 'components/PropertySlider'
 import Ribbon, { RibbonColors } from 'components/Ribbon'
 import Base from 'templates/Base'
 import { getFloorPlansAccordion, FloorPlan } from './floorPlansAccordion'
 
 import * as S from './styles'
 
-export type HouseProps = {
+export type PropertyProps = {
   title: string
   gallery: GalleryImageProps[]
   agent: AgentType
@@ -22,10 +22,10 @@ export type HouseProps = {
   ribbon?: React.ReactNode
   ribbonColor?: RibbonColors
   floorPlans: FloorPlan[]
-  otherHouses: HouseCardProps[]
-} & HouseInfoPreviewProps
+  otherProperties: PropertyCardProps[]
+} & PropertyInfoPreviewProps
 
-const House = ({
+const Property = ({
   gallery,
   agent,
   title,
@@ -37,8 +37,8 @@ const House = ({
   ribbon,
   ribbonColor,
   floorPlans,
-  otherHouses
-}: HouseProps) => {
+  otherProperties
+}: PropertyProps) => {
   return (
     <Base>
       <S.SectionGallery>
@@ -52,7 +52,7 @@ const House = ({
                 {title}
               </Heading>
               <S.InfoWrapper>
-                <HouseInfoPreview
+                <PropertyInfoPreview
                   amountOfBedrooms={amountOfBedrooms}
                   amountOfBathrooms={amountOfBathrooms}
                   amountOfGarages={amountOfGarages}
@@ -84,11 +84,11 @@ const House = ({
         </S.Content>
         <S.SectionOtherProperties>
           <Heading color="black">Other properties</Heading>
-          {otherHouses && <HouseSlider items={otherHouses} />}
+          {otherProperties && <PropertySlider items={otherProperties} />}
         </S.SectionOtherProperties>
       </S.Main>
     </Base>
   )
 }
 
-export default House
+export default Property

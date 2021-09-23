@@ -1,5 +1,5 @@
 import { useRouter } from 'next/dist/client/router'
-import House, { HouseProps } from 'templates/House'
+import Property, { PropertyProps } from 'templates/Property'
 import { initializeApollo } from 'utils/apollo'
 import { GetStaticProps } from 'next'
 import {
@@ -19,12 +19,12 @@ import {
 
 const apolloClient = initializeApollo()
 
-export default function Index(props: HouseProps) {
+export default function Index(props: PropertyProps) {
   const router = useRouter()
 
   if (router.isFallback) return null
 
-  return <House {...props} />
+  return <Property {...props} />
 }
 
 export async function getStaticPaths() {
@@ -84,14 +84,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           title: item?.title,
           img: `http://localhost:1337${item?.image?.url}`,
           floorMeasure: item?.measure,
-          infoFloor:
-            item?.infoFloor?.map((infoItem) => ({
-              amount: infoItem?.amount,
-              housePart: infoItem?.propertyPart
-            })) || []
+          infoFloor: item?.infoFloor || []
         })) || [],
       otherPropertiesTitle: recommendedProperties.recommended?.title,
-      otherHouses: recommendedProperties.recommended?.properties.map(
+      otherProperties: recommendedProperties.recommended?.properties.map(
         (property) => ({
           slug: property.slug,
           title: property.title,

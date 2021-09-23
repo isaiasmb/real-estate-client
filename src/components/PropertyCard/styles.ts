@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import * as HouseInfoPreviewStyles from 'components/HouseInfoPreview/styles'
+import * as PropertyInfoPreviewStyles from 'components/PropertyInfoPreview/styles'
 
 export const Wrapper = styled.a`
   ${({ theme }) => css`
@@ -13,7 +13,7 @@ export const Wrapper = styled.a`
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
     }
 
-    ${HouseInfoPreviewStyles.Wrapper} {
+    ${PropertyInfoPreviewStyles.Wrapper} {
       padding-top: ${theme.spacings.xxsmall};
       border-top: 1px solid ${theme.colors.lightGray};
     }

@@ -4,20 +4,20 @@ import { Camera } from '@styled-icons/boxicons-regular/Camera'
 import * as S from './styles'
 
 import Ribbon, { RibbonColors } from 'components/Ribbon'
-import HouseInfoPreview, {
-  HouseInfoPreviewProps
-} from 'components/HouseInfoPreview'
+import PropertyInfoPreview, {
+  PropertyInfoPreviewProps
+} from 'components/PropertyInfoPreview'
 
-export type HouseCardProps = {
+export type PropertyCardProps = {
   img: string
   title: string
   slug: string
   amountOfPhotos?: number
   ribbon?: React.ReactNode
   ribbonColor?: RibbonColors
-} & HouseInfoPreviewProps
+} & PropertyInfoPreviewProps
 
-const HouseCard = ({
+const PropertyCard = ({
   img,
   title,
   slug,
@@ -28,8 +28,8 @@ const HouseCard = ({
   measures,
   ribbon,
   ribbonColor
-}: HouseCardProps) => (
-  <Link href={`house/${slug}`} passHref>
+}: PropertyCardProps) => (
+  <Link href={`property/${slug}`} passHref>
     <S.Wrapper>
       <S.OverImageBox>
         {!!ribbon && <Ribbon color={ribbonColor}>{ribbon}</Ribbon>}
@@ -44,7 +44,7 @@ const HouseCard = ({
         <img src={img} alt={title} />
       </S.ImageBox>
       <S.Title>{title}</S.Title>
-      <HouseInfoPreview
+      <PropertyInfoPreview
         amountOfBedrooms={amountOfBedrooms}
         amountOfBathrooms={amountOfBathrooms}
         amountOfGarages={amountOfGarages}
@@ -54,4 +54,4 @@ const HouseCard = ({
   </Link>
 )
 
-export default HouseCard
+export default PropertyCard

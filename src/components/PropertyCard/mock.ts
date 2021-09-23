@@ -1,4 +1,4 @@
-import { HouseCardProps } from '.'
+import { PropertyCardProps } from '.'
 
 export default [
   {
@@ -89,4 +89,4 @@ export default [
     ribbon: 'Rent',
     ribbonColor: 'primary'
   }
-] as HouseCardProps[]
+] as PropertyCardProps[]

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 import * as HeadingStyles from 'components/Heading/styles'
-import * as HouseInfoPreviewStyles from 'components/HouseInfoPreview/styles'
+import * as PropertyInfoPreviewStyles from 'components/PropertyInfoPreview/styles'
 import { Container } from 'components/Container'
 
 export const Main = styled(Container)``
@@ -59,7 +59,7 @@ export const InfoWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    ${HouseInfoPreviewStyles.Wrapper} {
+    ${PropertyInfoPreviewStyles.Wrapper} {
       margin-right: ${theme.spacings.small};
     }
 
@@ -101,9 +101,9 @@ export const InfoFloor = styled.div`
   `}
 `
 
-export const HousePartAmount = styled.b``
+export const PropertyPartAmount = styled.b``
 
-export const HousePart = styled.span`
+export const PropertyPart = styled.span`
   ${({ theme }) => css`
     margin-left: ${theme.spacings.xxxsmall};
   `}

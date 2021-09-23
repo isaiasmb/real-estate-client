@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import HouseInfoPreview from '.'
+import PropertyInfoPreview from '.'
 
-describe('<HouseInfoPreview />', () => {
+describe('<PropertyInfoPreview />', () => {
   it('should render correctly', () => {
     renderWithTheme(
-      <HouseInfoPreview
+      <PropertyInfoPreview
         amountOfBedrooms={3}
         amountOfBathrooms={2}
         amountOfGarages={1}

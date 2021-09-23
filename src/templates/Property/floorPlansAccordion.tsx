@@ -10,9 +10,9 @@ const FloorPlanHeaderAccordion = ({
 }: FloorPlanHeaderAccordionProps) => (
   <S.HeaderAccordionWrapper>
     {infoFloor.map((item) => (
-      <S.InfoFloor key={`${item.housePart}-${item.amount}`}>
-        <S.HousePartAmount>{item.amount}</S.HousePartAmount>
-        <S.HousePart>{item.housePart}</S.HousePart>
+      <S.InfoFloor key={`${item.propertyPart}-${item.amount}`}>
+        <S.PropertyPartAmount>{item.amount}</S.PropertyPartAmount>
+        <S.PropertyPart>{item.propertyPart}</S.PropertyPart>
       </S.InfoFloor>
     ))}
   </S.HeaderAccordionWrapper>
@@ -20,7 +20,7 @@ const FloorPlanHeaderAccordion = ({
 
 export type InfoFloor = {
   amount: number
-  housePart: 'bed' | 'bath' | 'garage'
+  propertyPart: 'bed' | 'bath' | 'garage'
 }
 
 export type FloorPlan = {

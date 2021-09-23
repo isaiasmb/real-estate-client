@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import HouseCard, { HouseCardProps } from '.'
+import PropertyCard, { PropertyCardProps } from '.'
 
 export default {
-  title: 'HouseCard',
-  component: HouseCard,
+  title: 'PropertyCard',
+  component: PropertyCard,
   args: {
     title: 'House on the Arcadia',
     img: 'https://source.unsplash.com/user/fromitaly/1042x580',
@@ -20,8 +20,8 @@ export default {
   }
 } as Meta
 
-export const Default: Story<HouseCardProps> = (args) => (
+export const Default: Story<PropertyCardProps> = (args) => (
   <div style={{ width: '30rem' }}>
-    <HouseCard {...args} />
+    <PropertyCard {...args} />
   </div>
 )

@@ -1,13 +1,13 @@
 import { ArrowBackIos as ArrowLeft } from '@styled-icons/material-outlined/ArrowBackIos'
 import { ArrowForwardIos as ArrowRight } from '@styled-icons/material-outlined/ArrowForwardIos'
 
-import HouseCard, { HouseCardProps } from 'components/HouseCard'
+import PropertyCard, { PropertyCardProps } from 'components/PropertyCard'
 import Slider, { SliderSettings } from 'components/Slider'
 
 import * as S from './styles'
 
-export type HouseSliderProps = {
-  items: HouseCardProps[]
+export type PropertySliderProps = {
+  items: PropertyCardProps[]
 }
 
 const settings: SliderSettings = {
@@ -48,14 +48,14 @@ const settings: SliderSettings = {
   prevArrow: <ArrowLeft aria-label="previous partners" />
 }
 
-const HouseSlider = ({ items }: HouseSliderProps) => (
+const PropertySlider = ({ items }: PropertySliderProps) => (
   <S.Wrapper>
     <Slider settings={settings}>
       {items.map((item, index) => (
-        <HouseCard key={index} {...item} />
+        <PropertyCard key={index} {...item} />
       ))}
     </Slider>
   </S.Wrapper>
 )
 
-export default HouseSlider
+export default PropertySlider

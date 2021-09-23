@@ -9,7 +9,7 @@ import { OptionType } from 'components/form/Dropdown'
 
 import * as S from './styles'
 
-const houseOptions: OptionType[] = [
+const propertyOptions: OptionType[] = [
   { value: 'apartments', label: 'Apartment' },
   { value: 'house', label: 'House' },
   { value: 'villa', label: 'Villa' }
@@ -25,13 +25,15 @@ const bedroomsOptions: OptionType[] = [
 ]
 
 const SearchForm = () => {
-  const [houseSelected, setHouseSelected] = useState<OptionType | null>(null)
+  const [propertySelected, setPropertySelected] = useState<OptionType | null>(
+    null
+  )
   const [bedroomSelected, setBedroomSelected] = useState<OptionType | null>(
     null
   )
 
-  const handleHouseSelected = (value: OptionType | null) => {
-    setHouseSelected(value)
+  const handlePropertySelected = (value: OptionType | null) => {
+    setPropertySelected(value)
   }
 
   const handleBedroomSelected = (value: OptionType | null) => {
@@ -43,11 +45,11 @@ const SearchForm = () => {
       <Container>
         <TextField icon={<Search />} />
         <Select
-          id="house-filter"
+          id="property-filter"
           placeholder="Type"
-          options={houseOptions}
-          selected={houseSelected}
-          handleSelected={handleHouseSelected}
+          options={propertyOptions}
+          selected={propertySelected}
+          handleSelected={handlePropertySelected}
         />
         <Select
           id="bedrooms-filter"

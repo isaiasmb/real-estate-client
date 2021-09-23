@@ -2,14 +2,14 @@ import 'match-media-mock'
 import { screen } from '@testing-library/react'
 
 import { renderWithTheme } from 'utils/tests/helpers'
-import houseCardsMock from 'components/HouseCard/mock'
+import propertyCardsMock from 'components/PropertyCard/mock'
 
-import HouseSlider from '.'
+import PropertySlider from '.'
 
 describe('<PartnerSlider />', () => {
   it('should render with 4 items', () => {
     const { container } = renderWithTheme(
-      <HouseSlider items={houseCardsMock} />
+      <PropertySlider items={propertyCardsMock} />
     )
     expect(container.querySelectorAll('.slick-active')).toHaveLength(4)
     expect(screen.getByLabelText(/previous partners/i)).toBeInTheDocument()

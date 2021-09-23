@@ -144,7 +144,7 @@ exports[`<Banner /> should render correctly 1`] = `
       </h3>
       <a
         class="c6"
-        href="/houses/nemo-enim-ipsam"
+        href="/properties/nemo-enim-ipsam"
       >
         <span>
           Buy now

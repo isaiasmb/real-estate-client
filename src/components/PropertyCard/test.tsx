@@ -1,25 +1,26 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import HouseCard from '.'
+import PropertyCard from '.'
 
-jest.mock('components/HouseInfoPreview', () => {
+jest.mock('components/PropertyInfoPreview', () => {
   return {
     __esModule: true,
     default: function Mock() {
-      return <div data-testid="Mock HouseInfoPreview"></div>
+      return <div data-testid="Mock PropertieInfoPreview"></div>
     }
   }
 })
 
 const props = {
   title: 'House on the Arcadia',
-  img: 'https://source.unsplash.com/user/fromitaly/1042x580'
+  img: 'https://source.unsplash.com/user/fromitaly/1042x580',
+  slug: 'slug'
 }
 
-describe('<HouseCard />', () => {
+describe('<PropertyCard />', () => {
   it('should render correctly', () => {
-    renderWithTheme(<HouseCard {...props} />)
+    renderWithTheme(<PropertyCard {...props} />)
 
     expect(
       screen.getByRole('heading', { name: props.title })
@@ -30,11 +31,11 @@ describe('<HouseCard />', () => {
       props.img
     )
 
-    expect(screen.getByTestId('Mock HouseInfoPreview')).toBeInTheDocument()
+    expect(screen.getByTestId('Mock PropertieInfoPreview')).toBeInTheDocument()
   })
 
   it('should render the amount of photos', () => {
-    renderWithTheme(<HouseCard {...props} amountOfPhotos={15} />)
+    renderWithTheme(<PropertyCard {...props} amountOfPhotos={15} />)
 
     const amountOfPhotos = screen.getByLabelText(/Icon with a camera/i)
     expect(amountOfPhotos).toBeInTheDocument()
@@ -43,7 +44,7 @@ describe('<HouseCard />', () => {
 
   it('should render Ribbon', () => {
     renderWithTheme(
-      <HouseCard {...props} ribbon="My Ribbon" ribbonColor="secondary" />
+      <PropertyCard {...props} ribbon="My Ribbon" ribbonColor="secondary" />
     )
     const ribbon = screen.getByText(/my ribbon/i)
 

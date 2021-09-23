@@ -8,7 +8,7 @@ const props = {
   title: 'Nemo enim ipsam',
   subtitle: '<p>Ut labore et <strong>dolore magnam</strong> aliquam',
   buttonLabel: 'Buy now',
-  buttonLink: '/houses/nemo-enim-ipsam'
+  buttonLink: '/properties/nemo-enim-ipsam'
 }
 
 describe('<Banner />', () => {
