@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div``
 
-export const PartnerLogo = styled.img`
+export const Logo = styled.img`
   ${({ theme }) => css`
     ${media.greaterThan('large')`
       filter: brightness(100%) contrast(100%) saturate(0%) blur(0px)

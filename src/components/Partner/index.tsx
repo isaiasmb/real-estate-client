@@ -1,15 +1,15 @@
 import * as S from './styles'
 
 export type PartnerProps = {
-  partnerLogo: string
-  partnerLink: string
-  partnerName: string
+  logo: string
+  link: string
+  name: string
 }
 
-const Partner = ({ partnerLogo, partnerLink, partnerName }: PartnerProps) => (
+const Partner = ({ logo, link, name }: PartnerProps) => (
   <S.Wrapper>
-    <a href={partnerLink}>
-      <S.PartnerLogo src={partnerLogo} alt={partnerName} />
+    <a href={link}>
+      <S.Logo src={logo} alt={name} />
     </a>
   </S.Wrapper>
 )

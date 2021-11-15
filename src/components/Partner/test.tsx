@@ -7,9 +7,9 @@ describe('<Partner />', () => {
   it('should render logo and link', () => {
     renderWithTheme(
       <Partner
-        partnerLink="http://parnerlink.com"
-        partnerLogo="http://parnerlink.com/parnerlogo"
-        partnerName="partnerName"
+        link="http://parnerlink.com"
+        logo="http://parnerlink.com/parnerlogo"
+        name="partnerName"
       />
     )
 
