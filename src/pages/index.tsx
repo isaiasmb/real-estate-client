@@ -5,11 +5,13 @@ import { initializeApollo } from 'utils/apollo'
 import {
   QUERY_BANNERS_SLIDERS,
   QUERY_PARALLAX,
+  QUERY_PARTNERS,
   QUERY_RECENT_PROPERTIES
 } from 'graphql/queries/home'
 import { QueryBannersSliders } from 'graphql/generated/QueryBannersSliders'
 import { QueryRecentProperties } from 'graphql/generated/QueryRecentProperties'
 import { QueryParallax } from 'graphql/generated/QueryParallax'
+import { QueryPartners } from 'graphql/generated/QueryPartners'
 
 const apolloClient = initializeApollo()
 
@@ -36,6 +38,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const { parallax } = parallaxResp.data
 
+  const partnersResp = await apolloClient.query<QueryPartners>({
+    query: QUERY_PARTNERS
+  })
+
+  const { partners } = partnersResp.data
+
   return {
     props: {
       banners: bannerSliders.map(({ banner }) => ({
@@ -61,7 +69,12 @@ export const getStaticProps: GetStaticProps = async () => {
         img: `http://localhost:1337${parallax?.image?.url}`,
         title: parallax?.title,
         description: parallax?.description
-      }
+      },
+      partners: partners.map((partner) => ({
+        name: partner.name,
+        link: partner.link,
+        logo: `http://localhost:1337${partner?.logo?.url}`
+      }))
     }
   }
 }
