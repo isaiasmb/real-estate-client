@@ -9,7 +9,19 @@ import Home, { HomeTemplateProps } from '.'
 
 const props: HomeTemplateProps = {
   banners: bannerMock,
-  recentProperties: propertiesMock
+  recentProperties: propertiesMock,
+  parallax: {
+    img: 'http://image.com',
+    title: 'Parallax title',
+    description: 'Parallax description'
+  },
+  partners: [
+    {
+      logo: 'http://logo.com',
+      link: 'http://link.com',
+      name: 'partner name'
+    }
+  ]
 }
 
 jest.mock('components/BannerSlider', () => {
