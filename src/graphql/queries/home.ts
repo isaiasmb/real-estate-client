@@ -41,3 +41,16 @@ export const QUERY_PARALLAX = gql`
     }
   }
 `
+
+export const QUERY_PARTNERS = gql`
+  query QueryPartners {
+    partners {
+      name
+      link
+      logo {
+        url
+      }
+      description
+    }
+  }
+`
