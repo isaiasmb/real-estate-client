@@ -29,7 +29,7 @@ const PropertyCard = ({
   ribbon,
   ribbonColor
 }: PropertyCardProps) => (
-  <Link href={`property/${slug}`} passHref>
+  <Link href={`/property/${slug}`} passHref>
     <S.Wrapper>
       <S.OverImageBox>
         {!!ribbon && <Ribbon color={ribbonColor}>{ribbon}</Ribbon>}
