@@ -1,6 +1,8 @@
 import { Container } from 'components/Container'
 import Footer from 'components/Footer'
 import Menu from 'components/Menu'
+import { useContext } from 'react'
+import baseContext from './baseContext'
 
 import * as S from './styles'
 
@@ -8,18 +10,22 @@ export type BaseProps = {
   children: React.ReactNode
 }
 
-const Base = ({ children }: BaseProps) => (
-  <section>
-    <Container>
-      <Menu />
-    </Container>
+const Base = ({ children }: BaseProps) => {
+  const { footer } = useContext(baseContext)
 
-    {children}
+  return (
+    <section>
+      <Container>
+        <Menu />
+      </Container>
 
-    <S.SectionFooter>
-      <Footer />
-    </S.SectionFooter>
-  </section>
-)
+      {children}
+
+      <S.SectionFooter>
+        <Footer {...footer} />
+      </S.SectionFooter>
+    </section>
+  )
+}
 
 export default Base
