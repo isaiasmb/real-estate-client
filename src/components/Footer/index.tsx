@@ -6,7 +6,37 @@ import { Container } from 'components/Container'
 
 import * as S from './styles'
 
-const Footer = () => (
+type BrandLink = {
+  label: string
+  link: string
+}
+
+type Social = {
+  name: string
+  link: string
+}
+
+export type FooterProps = {
+  labelAddress?: string
+  labelContactUs?: string
+  labelLinks?: string
+  labelSocial?: string
+  address?: string
+  email?: string
+  links?: BrandLink[]
+  social?: Social[]
+}
+
+const Footer = ({
+  labelAddress,
+  labelContactUs,
+  labelLinks,
+  labelSocial,
+  address,
+  email,
+  links = [],
+  social = []
+}: FooterProps) => (
   <S.Wrapper>
     <Container>
       <S.FooterContainer>
@@ -14,74 +44,54 @@ const Footer = () => (
         <S.Content>
           <S.Column>
             <Heading color="white" size="small">
-              Contact us
+              {labelContactUs || 'Contact us'}
             </Heading>
 
-            <a href="mailto:sac@athleta.com">sac@athleta.com</a>
+            {email && <a href={`mailto:${email}`}>{email}</a>}
           </S.Column>
 
           <S.Column>
             <Heading color="white" size="small">
-              Follow us
+              {labelSocial || 'Follow us'}
             </Heading>
 
-            <nav aria-labelledby="social media">
-              <a
-                href="https://www.instagram.com/athleta"
-                target="_blank"
-                rel="noopenner, noreferrer"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://www.twitter.com/athleta"
-                target="_blank"
-                rel="noopenner, noreferrer"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://www.youtube.com/athleta"
-                target="_blank"
-                rel="noopenner, noreferrer"
-              >
-                Youtube
-              </a>
-              <a
-                href="https://www.facebook.com/athleta"
-                target="_blank"
-                rel="noopenner, noreferrer"
-              >
-                Facebook
-              </a>
-            </nav>
+            {social.length && (
+              <nav aria-labelledby="social media">
+                {social.map((item) => (
+                  <a
+                    key={`${item.name}-${item.link}`}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopenner, noreferrer"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </nav>
+            )}
           </S.Column>
 
           <S.Column>
             <Heading color="white" size="small">
-              Links
+              {labelLinks || 'Links'}
             </Heading>
 
-            <nav aria-labelledby="footer resources">
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-              <Link href="/properties">
-                <a>Properties</a>
-              </Link>
-              <Link href="/search">
-                <a>Search</a>
-              </Link>
-            </nav>
+            {links.length && (
+              <nav aria-labelledby="footer resources">
+                {links.map((link) => (
+                  <Link key={`${link.label}-${link.link}`} href={link.link}>
+                    <a>{link.label}</a>
+                  </Link>
+                ))}
+              </nav>
+            )}
           </S.Column>
 
           <S.Column aria-labelledby="footer-contact">
             <Heading color="white" size="small">
-              Location
+              {labelAddress || 'Location'}
             </Heading>
-            <span>Lorem ipsum dolor sit.</span>
-            <span>Lorem Ipsum</span>
-            <span>Lorem, ipsum dolor.</span>
+            {address && <p>{address}</p>}
           </S.Column>
         </S.Content>
       </S.FooterContainer>

@@ -7,6 +7,7 @@ export const Wrapper = styled.footer`
   ${({ theme }) => css`
     background-color: ${theme.colors.black};
     ${HeadingStyles.Wrapper} {
+      margin-bottom: ${theme.spacings.xsmall};
       text-transform: uppercase;
     }
   `}
