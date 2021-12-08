@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
+import Link from 'next/link'
 
 import Logo from 'components/Logo'
 import Button from 'components/Button'
@@ -28,10 +29,18 @@ const Menu = ({ username }: MenuProps) => {
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
-          <S.MenuLink href="#">Home</S.MenuLink>
-          <S.MenuLink href="#">Properties</S.MenuLink>
-          <S.MenuLink href="#">About us</S.MenuLink>
-          <S.MenuLink href="#">Contact</S.MenuLink>
+          <Link href="/" passHref>
+            <S.MenuLink>Home</S.MenuLink>
+          </Link>
+          <Link href="/properties" passHref>
+            <S.MenuLink>Properties</S.MenuLink>
+          </Link>
+          <Link href="/about-us" passHref>
+            <S.MenuLink>About us</S.MenuLink>
+          </Link>
+          <Link href="/contact" passHref>
+            <S.MenuLink>Contact</S.MenuLink>
+          </Link>
         </S.MenuNav>
       </MediaMatch>
 
@@ -53,10 +62,18 @@ const Menu = ({ username }: MenuProps) => {
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
         <S.MenuNav>
-          <S.MenuLink href="#">Home</S.MenuLink>
-          <S.MenuLink href="#">Properties</S.MenuLink>
-          <S.MenuLink href="#">About us</S.MenuLink>
-          <S.MenuLink href="#">Contact</S.MenuLink>
+          <Link href="/" passHref>
+            <S.MenuLink>Home</S.MenuLink>
+          </Link>
+          <Link href="/properties" passHref>
+            <S.MenuLink>Properties</S.MenuLink>
+          </Link>
+          <Link href="/about-us" passHref>
+            <S.MenuLink>About us</S.MenuLink>
+          </Link>
+          <Link href="/contact" passHref>
+            <S.MenuLink>Contact</S.MenuLink>
+          </Link>
 
           {!!username && <S.MenuLink href="#">My account</S.MenuLink>}
         </S.MenuNav>
