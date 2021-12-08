@@ -6,7 +6,7 @@ import propertyCardsMock from 'components/PropertyCard/mock'
 
 import PropertySlider from '.'
 
-describe('<PartnerSlider />', () => {
+describe('<PropertySlider />', () => {
   it('should render with 4 items', () => {
     const { container } = renderWithTheme(
       <PropertySlider items={propertyCardsMock} />
