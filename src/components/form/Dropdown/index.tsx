@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import Portal from 'components/Portal'
+
+import { usePortal } from 'hooks/usePortal'
+
 import * as S from './styles'
 
 export type OptionType = {
@@ -31,6 +33,8 @@ const Dropdown = ({
   const [left, setLeft] = useState(0)
   const [top, setTop] = useState(0)
   const [minWidth, setMinWidth] = useState(0)
+  const [show, setShow] = useState(false)
+  const { Portal } = usePortal()
 
   useEffect(() => {
     if (newNode) {
@@ -38,12 +42,14 @@ const Dropdown = ({
       setLeft(rect.left)
       setTop(rect.top + rect.height + window.scrollY + 3)
       setMinWidth(rect.width)
+      setShow(true)
     }
   }, [newNode])
 
   return (
     <Portal>
       <S.Wrapper
+        show={show}
         top={top}
         left={left}
         minWidth={minWidth}

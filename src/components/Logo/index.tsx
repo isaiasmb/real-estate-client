@@ -103,10 +103,10 @@ const Logo = ({
       />
       <text
         fontVariant="small-caps"
-        fontSize="80.1216px"
+        fontSize="77px"
         fontWeight="600"
         fill={theme.colors[color]}
-        letterSpacing="29"
+        letterSpacing="28"
         transform="matrix(1 0 0 1 169.5381 359.4346)"
       >
         management

@@ -4,6 +4,7 @@ type WrapperProps = {
   top: number
   left: number
   minWidth: number
+  show: boolean
 }
 
 type OptionProps = {
@@ -12,7 +13,7 @@ type OptionProps = {
 }
 
 export const Wrapper = styled.div<WrapperProps>`
-  ${({ theme, top, left, minWidth }) => css`
+  ${({ theme, top, left, minWidth, show }) => css`
     border-radius: 0.2rem;
     border: 0.1rem solid;
     border-color: ${theme.colors.lightGray};
@@ -21,6 +22,8 @@ export const Wrapper = styled.div<WrapperProps>`
     top: ${top}px;
     left: ${left}px;
     min-width: ${minWidth}px;
+
+    opacity: ${show ? '1' : '0'};
   `}
 `
 

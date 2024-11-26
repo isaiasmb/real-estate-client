@@ -8,7 +8,7 @@ export type HeadingProps = {
 
 const Heading = ({
   children,
-  color = 'white',
+  color = 'black',
   size = 'medium'
 }: HeadingProps) => (
   <S.Wrapper color={color} size={size}>
